@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+
+		<action name="register" class="com.action.RegisterAction">
+			<result name="manager">/manager.jsp</result>
+			<result name="author">/display.jsp</result>
+			<result name="editor">/editor.jsp</result>
+			<result name="expert">/expert.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="login" class="com.action.LoginAction">
+			<result name="manager">/manager.jsp</result>
+			<result name="author">/display.jsp</result>
+			<result name="editor">/editor.jsp</result>
+			<result name="expert">/expert.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="modify" class="com.action.ModifyUser">
+			<result name="modifyInfo">/error.jsp</result>
+		</action>
+		<action name="deleteUser" class="com.action.DeleteUser">
+			<result name="delete">/error.jsp</result>
+		</action>
+		<action name="deleteCtb" class="com.action.DeleteContribution">
+			<result name="delete">/error.jsp</result>
+		</action>
+		<action name="resetPwd" class="com.action.ResetPassword">
+			<result name="resetPwd">/error.jsp</result>
+		</action>
+		<action name="addFile" class="com.action.AdFileAction">
+			<result name="addfile">/error.jsp</result>
+		</action>
+		<action name="dispatch" class="com.action.DispatchContribution">
+			<result name="dispatch">/error.jsp</result>
+		</action>
+		<action name="isjudge" class="com.action.AcceptContribution">
+			<result name="isjudge">/error.jsp</result>
+		</action>
+		<action name="modifyCTB" class="com.action.ModifyContribution">
+			<result name="modifyCTB">/error.jsp</result>
+		</action>
+		<action name="addUser" class="com.action.AddUser">
+			<result name="message">/error.jsp</result>
+		</action>
+		<action name="down" class="com.action.DownFileAction">
+			<result name="success" type="stream">
+				<!-- 指定被下载文件的文件类型 -->
+				<param name="contentType">text/plain </param>
+				<!-- 指定下载文件的文件位置 -->
+				<param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+				<param name="inputName">downloadFileName</param>
+			</result>
+		</action>
+		<action name="downLoad" class="com.action.DownFileAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/plain </param>
+				<param name="contentDisposition">attachment;filename="${filename}"</param>
+				<param name="inputName">downloadFile</param>
+			</result>
+		</action>
+
+	</package>
+</struts>
