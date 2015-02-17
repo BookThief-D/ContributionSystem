@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ContributionSystem"
+  id="myeclipse.1351445224835"
+  context-root="/cs"
+  j2ee-spec="6.0"
+  archive="ContributionSystem.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
